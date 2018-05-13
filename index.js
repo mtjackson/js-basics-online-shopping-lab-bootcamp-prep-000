@@ -46,15 +46,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-  let i = 0;
-  for (i = 0; i < cart.length; i++) {
-    if (cart[i].itemName === item) {
-      cart.splice(i, 1);
-      return cart;
-    } else {
-      i++;
-    } 
-    return "That item is not in your cart.";
+  for (index, value[itemName]) in cart.enumerated() {
+    if (value[itemName] == item && cart.contains(item)) {
+        cart.remove(index)
+        return cart;
+    }
   }
 }
 
