@@ -50,8 +50,10 @@ function removeFromCart(item) {
     if (value[itemName] == item && cart.contains(item)) {
         cart.remove(index)
         return cart;
+    } else {
+      return "That item is not in your cart."
     }
-  }
+  } 
 }
 
 function placeOrder(cardNumber) {
