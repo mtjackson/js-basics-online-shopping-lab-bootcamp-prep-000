@@ -47,10 +47,10 @@ function total() {
 
 function removeFromCart(item) {
   let i = 0;
-  for (i = 0; i < cart.length; i++) {
+  while (i < cart.length) {
     if (cart[i].itemName !== item) {
       i++;
-    } else if (cart[i].itemName !== item) {
+    } else if (cart[i].itemName === item) {
       cart.splice(i, 1);
       return cart;
     } else {
