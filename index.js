@@ -46,7 +46,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (index, value[itemName]) in cart.enumerated() {
+  for ((index, value[itemName]) in cart.enumerated()) {
     if (value[itemName] == item && cart.contains(item)) {
         cart.remove(index)
         return cart;
