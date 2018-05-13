@@ -60,7 +60,9 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  if (typeof cardNumber !== undefined) {
+  if (cardNumber.length === 0) {
+  return "Sorry, we don't have a credit card on file for you.";
+  } else if (typeof cardNumber !== undefined) {
     var totalPrice = 0
     let i = 0
     for (i = 0; i <= cart.length - 1; i++) {
@@ -68,7 +70,5 @@ function placeOrder(cardNumber) {
     }
     cart = []
     return "Your total cost is $" + totalPrice + ", which will be charged to the card " + cardNumber + ".";
-  } if (cardNumber.length === 0) {
-  return "Sorry, we don't have a credit card on file for you.";
-  }
+  } 
 }
