@@ -68,6 +68,6 @@ function placeOrder(cardNumber) {
     }
     cart = []
     return "Your total cost is $" + totalPrice + ", which will be charged to the card " + cardNumber + ".";
-  } 
+  } if (cardNumber.length === 0) {
   return "Sorry, we don't have a credit card on file for you.";
 }
