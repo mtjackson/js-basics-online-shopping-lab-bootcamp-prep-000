@@ -60,7 +60,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  while (typeof cardNumber !== undefined) {
+  if (typeof cardNumber !== undefined) {
     var totalPrice = 0
     let i = 0
     for (i = 0; i <= cart.length - 1; i++) {
